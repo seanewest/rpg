@@ -1,2 +1,4 @@
 Make your move
-[attack](attack.md) [move](move.md)
+
+[attack](./moves/a.md)
+[spell](./moves/s.md)
