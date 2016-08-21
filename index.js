@@ -15,14 +15,13 @@ var doTurn = function (player, cpu, path, moves, move) {
 
   if (moves.length == 4) return;
 
-  var githubURL = 'https://github.com/seanewest/rpg/blob/master';
-  var movesURL = githubURL + '/' + 'moves';
+  var movesURL = 'https://github.com/seanewest/rpg/blob/master/moves';
   var movesPath = './moves';
   var attack = moves + attackMove;
   var attackURL = movesURL + '/' + attack + '.md';
   var attackPath = movesPath + '/' + attack + '.md';
   var spell = moves + spellMove;
-  var spellURL = spellURL + '/' + spell + '.md';
+  var spellURL = movesURL + '/' + spell + '.md';
   var spellPath = movesPath + '/'  + spell + '.md';
 
   fs.open(path, 'w', function(err, fd) {
