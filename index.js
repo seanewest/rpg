@@ -15,10 +15,14 @@ var doTurn = function (player, cpu, path, moves, move) {
 
   if (moves.length == 4) return;
 
-  var movesPath = '/moves';
+  var githubURL = 'https://github.com/seanewest/rpg/blob/master';
+  var movesURL = githubURL + '/' + 'moves';
+  var movesPath = './moves';
   var attack = moves + attackMove;
+  var attackURL = movesURL + '/' + attack + '.md';
   var attackPath = movesPath + '/' + attack + '.md';
   var spell = moves + spellMove;
+  var spellURL = spellURL + '/' + spell + '.md';
   var spellPath = movesPath + '/'  + spell + '.md';
 
   fs.open(path, 'w', function(err, fd) {
@@ -29,10 +33,10 @@ var doTurn = function (player, cpu, path, moves, move) {
       console.log('generating' + path);
       fs.write(fd, 'Make your move\n\n');
 
-      fs.write(fd, '[attack](' + attackPath + ')');
+      fs.write(fd, '[attack](' + attackURL + ')');
       fs.write(fd, '\n');
 
-      fs.write(fd, '[spell](' + spellPath + ')');
+      fs.write(fd, '[spell](' + spellURL + ')');
       fs.write(fd, '\n');
     }
   });

@@ -1,4 +1,4 @@
 Make your move
 
-[attack](./moves/sssa.md)
-[spell](./moves/ssss.md)
+[attack](https://github.com/seanewest/rpg/blob/master/moves/sssa.md)
+[spell](undefined/ssss.md)
